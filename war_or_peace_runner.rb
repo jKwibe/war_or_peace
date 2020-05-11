@@ -98,7 +98,16 @@ class Game
               turn.pile_cards
               puts "        #{winner.name} won #{turn.spoils_of_war.size} cards"
               turn.award_spoils(winner)
-              puts turn.type
+
+            when :war
+              winner = turn.winner
+              puts "    WAR:(#{player1.name} (#{player1.deck.cards[0].rank}) no cards #{player1.deck.cards.size} => (#{player2.name}: #{player2.deck.cards[0].rank} )no cards #{player2.deck.cards.size}"
+              turn.pile_cards
+              puts "      #{winner.name} won #{turn.spoils_of_war.size} cards"
+              turn.award_spoils(winner)
+            else
+              turn.pile_cards
+              puts "      *mutually assured destruction* 6 removed from play"
             end
 
     end
