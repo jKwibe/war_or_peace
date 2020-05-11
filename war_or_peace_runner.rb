@@ -90,6 +90,9 @@ class Game
             @count < 1000000
 
             @count += 1
+            puts '__'*25
+            puts "Turn #{@count}"
+            puts '__'*25
 
             case turn.type
             when :basic
