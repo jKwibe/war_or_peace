@@ -89,6 +89,18 @@ class Game
             player2.deck.cards.size > 0 &&
             @count < 1000000
 
+            @count += 1
+
+            case turn.type
+            when :basic
+              winner = turn.winner
+              puts "    BASIC:(#{player1.name} (#{player1.deck.cards[0].rank}) no cards #{player1.deck.cards.size} => #{player2.name}: (#{player2.deck.cards[0].rank}) no cards #{player2.deck.cards.size}"
+              turn.pile_cards
+              puts "        #{winner.name} won #{turn.spoils_of_war.size} cards"
+              turn.award_spoils(winner)
+              puts turn.type
+            end
+
     end
 
   end
