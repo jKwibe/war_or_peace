@@ -121,3 +121,24 @@ class Game
 
   end
 end
+
+print 'Player 1: '
+first_player = gets.chomp.capitalize
+print 'Player 2: '
+second_player = gets.chomp.capitalize
+
+game = Game.new( first_player, second_player )
+
+puts "Welcome to War! (or Peace) This game will be played with 52 cards."
+puts "The players today are #{first_player} and #{second_player}."
+puts "Type 'GO' to start the game!"
+puts '___'*25
+puts "\n\n"
+
+start_phrase = gets.chomp.upcase
+
+if start_phrase == 'GO'
+  game.start
+else
+  puts "Please type 'GO'"
+end
