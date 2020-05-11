@@ -31,6 +31,7 @@ class Turn
         player2
       end
     when :war
+
       if player1.deck.rank_of_card_at(2) >
         player2.deck.rank_of_card_at(2)
         player1
@@ -47,16 +48,16 @@ class Turn
 
     case self.type
     when :basic
-      @spoils_of_war << player1.deck.cards[0] << player2.deck.cards[0]
+      @spoils_of_war.concat(player1.deck.remove_card(1), player2.deck.remove_card(1)) 
     when :war
-      (@spoils_of_war << player1.deck.remove_card(3)<< player2.deck.remove_card(3)).flatten!
+      @spoils_of_war.concat(player1.deck.remove_card(3), player2.deck.remove_card(3))
     else
       player1.deck.remove_card(3)
       player2.deck.remove_card(3)
     end
   end
-  def award_spoils(winner)
-      (self.winner.deck.cards << @spoil_of_war).flatten
+  def award_spoils(champ)
+      (champ.deck.cards.concat(@spoils_of_war))
       @spoils_of_war = []
   end
 end
