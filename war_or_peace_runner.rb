@@ -74,7 +74,7 @@ class Game
       c21,c22,c23,c24,c25,c26,c27,c28,c29,c30,c31,c32,c33,c34,c35,c36,c37,c38,c39,c40,
       c41,c42,c43,c44,c45,c46,c47,c48,c49,c50,c51,c52].shuffle
 
-    deck_1_cards = shuffled_cards.shift(26)
+    deck_1_cards = cards.shift(26)
     deck_2_cards = cards
 
     deck1 = Deck.new(deck_1_cards)
