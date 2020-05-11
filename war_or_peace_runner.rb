@@ -113,6 +113,12 @@ class Game
               puts "      *mutually assured destruction* 6 removed from play"
             end
 
+            puts "\n"
+
+            puts "          End of Turn \n#{'__'*25}"
+
+            puts "\n"
+
     end
 
 
