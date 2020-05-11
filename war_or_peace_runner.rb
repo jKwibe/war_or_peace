@@ -84,5 +84,10 @@ class Game
 
     turn = Turn.new(player1, player2)
 
+    while   player1.deck.cards.size > 0 &&
+            player2.deck.cards.size > 0 
+
+    end
+
   end
 end
