@@ -7,6 +7,7 @@ class Game
   def initialize(player1, player2)
     @first_player = player1
     @second_player = player2
+    @count = 0
   end
 
   def start
@@ -85,7 +86,8 @@ class Game
     turn = Turn.new(player1, player2)
 
     while   player1.deck.cards.size > 0 &&
-            player2.deck.cards.size > 0 
+            player2.deck.cards.size > 0 &&
+            @count < 1000000
 
     end
 
