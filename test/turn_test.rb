@@ -233,8 +233,6 @@ class TurnTest < Minitest::Test
 
     turn.pile_cards
 
-      require "pry"
-      binding.pry
     assert_equal 1 , turn.player2.deck.cards.size
     assert_equal 1 , turn.player1.deck.cards.size
 
