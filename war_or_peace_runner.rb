@@ -76,5 +76,8 @@ class Game
     deck_1_cards = shuffled_cards.shift(26)
     deck_2_cards = cards
 
+    deck1 = Deck.new(deck_1_cards)
+    deck2 = Deck.new(deck_2_cards)
+
   end
 end
