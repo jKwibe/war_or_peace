@@ -112,5 +112,12 @@ class Game
 
     end
 
+
+          if @count >= 1000000
+            p "-------------- DRAW ---------------"
+          else
+            p "------------- #{winner.name} has won the game ---------------"
+          end
+
   end
 end
