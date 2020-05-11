@@ -82,6 +82,7 @@ class Game
     player1 = Player.new(@first_player, deck1)
     player2 = Player.new(@second_player, deck2)
 
+    turn = Turn.new(player1, player2)
 
   end
 end
