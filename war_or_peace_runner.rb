@@ -79,5 +79,9 @@ class Game
     deck1 = Deck.new(deck_1_cards)
     deck2 = Deck.new(deck_2_cards)
 
+    player1 = Player.new(@first_player, deck1)
+    player2 = Player.new(@second_player, deck2)
+
+
   end
 end
